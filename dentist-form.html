@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lead Capture</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <form id="leadForm" name="Website Lead" novalidate>
+        <h1>Get Your Free Quote</h1>
+
+        <div class="field">
+          <label for="firstName">First name</label>
+          <input
+            id="firstName"
+            name="first_name"
+            type="text"
+            autocomplete="given-name"
+            required
+          />
+          <p class="error"></p>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last name</label>
+          <input
+            id="lastName"
+            name="last_name"
+            type="text"
+            autocomplete="family-name"
+            required
+          />
+          <p class="error"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+          <p class="error"></p>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel" />
+          <p class="hint">Include country code, e.g. +1 555 123 4567</p>
+          <p class="error"></p>
+        </div>
+
+        <!-- simple honeypot -->
+        <input
+          type="text"
+          name="company"
+          class="hp"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <button id="submitBtn" type="submit">Get SMS Quote</button>
+        <p id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <!-- HighLevel External Tracking (paste yours) -->
+    <script
+      src="https://link.msgsndr.com/js/external-tracking.js"
+      data-tracking-id="tk_ecdc77240a7242ae8c7d63b7f9aa8497"
+    ></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
